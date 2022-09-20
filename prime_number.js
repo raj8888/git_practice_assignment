@@ -1,20 +1,19 @@
-function prime_number(num){
-    factors=0
-    for(let i=0;i<num;i++){
-       if(num%i==0){
-        factors++
-       } 
+
+function prime_number(number) {
+  factors = 0;
+  for (let i = 2; i * i <= number; i++) {
+    if (number % i == 0) {
+      return false;
+
     }
-    if(factors==2){
-        return true;
-    }
-        return false
+  }
+  return true;
 }
 
-
-let a=45
-if(prime_number(a)){
-    console.log(a,"is prime number")
-}else{
-    console.log(a,"is not prime")
+let a = 45;
+if (prime_numbers(a)) {
+  console.log(a, "is prime");
+} else {
+  console.log(a, "is not prime");
 }
+
