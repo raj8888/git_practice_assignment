@@ -1,8 +1,8 @@
 function prime_number(num){
     factors=0
     for(let i=0;i<num;i++){
-       if(i%num==0){
-        factors--
+       if(num%i==0){
+        factors++
        } 
     }
     if(factors==2){
@@ -13,9 +13,8 @@ function prime_number(num){
 
 
 let a=45
-prime_numbers(a)
-if(prime_numbers(a)){
-    console.log(a,"prime")
+if(prime_number(a)){
+    console.log(a,"is prime number")
 }else{
-    console.log(a,"not prime")
+    console.log(a,"is not prime")
 }
